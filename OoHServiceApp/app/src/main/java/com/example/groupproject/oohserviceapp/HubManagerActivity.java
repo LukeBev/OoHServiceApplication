@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 
 /**
- * Created by Luke on 14/11/2017.
+ * Created on 14/11/2017.
  */
 
 public class HubManagerActivity extends AppCompatActivity {
