@@ -1,3 +1,15 @@
 <resources>
-    <string name="app_name">OoHServiceApp</string>
+    <string name="app_name">GP Out of Hours Service</string>
+    <string name="oncallheading">On-Call Team</string>
+    <string name="hubmanheading">Hub Manager</string>
+    <string name="addnewpatient">Add New Patient</string>
+    <string name="savenewpatient">Save New Patient</string>
+    <string name="activepatients">Active Patients</string>
+    <string name="forename">Enter Patient Forename(s)</string>
+    <string name="surname">Enter Patient Surname(s)</string>
+    <string name="chinumber">Enter Patient CHI Number</string>
+    <string name="dob">Enter Patient D.O.B</string>
+    <string name="address">Enter Patient Address</string>
+    <string name="patientheight">Enter Patient Height</string>
+    <string name="patientweight">Enter Patient Weight</string>
 </resources>
