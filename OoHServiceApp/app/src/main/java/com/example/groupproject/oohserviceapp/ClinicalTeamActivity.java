@@ -10,7 +10,7 @@ import android.widget.Button;
  * Created on 14/11/2017.
  */
 
-public class ClinicalTeam extends AppCompatActivity {
+public class ClinicalTeamActivity extends AppCompatActivity {
 
     Button addNewPatientButton;
 
@@ -27,7 +27,7 @@ public class ClinicalTeam extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Start Track List Activity
-                Intent EditPatient = new Intent(v.getContext(), EditPatient.class);
+                Intent EditPatient = new Intent(v.getContext(), EditPatientActivity.class);
                 startActivity(EditPatient);
             }
         });

@@ -23,21 +23,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ClinicalTeam">
+        <activity android:name=".ClinicalTeamActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".EditPatient">
+        <activity android:name=".EditPatientActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ViewPatient">
+        <activity android:name=".ViewPatientActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

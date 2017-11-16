@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Start Clinical team Activity
-                Intent clinicalTeamScreen = new Intent(v.getContext(), ClinicalTeam.class);
+                Intent clinicalTeamScreen = new Intent(v.getContext(), ClinicalTeamActivity.class);
                 startActivity(clinicalTeamScreen);
             }
         });

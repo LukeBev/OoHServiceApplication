@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
  * Created on 14/11/2017.
  */
 
-public class ViewPatient extends AppCompatActivity {
+public class ViewPatientActivity extends AppCompatActivity {
 
 
 

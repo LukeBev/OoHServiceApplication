@@ -29,7 +29,7 @@ public class HubManagerActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 // Go to Edit Patient Screen
-                Intent EditPatient = new Intent(v.getContext(), EditPatient.class);
+                Intent EditPatient = new Intent(v.getContext(), EditPatientActivity.class);
                 startActivity(EditPatient);
             }
         });

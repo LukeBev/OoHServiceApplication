@@ -12,7 +12,7 @@ import android.widget.ImageButton;
  * Created on 14/11/2017.
  */
 
-public class EditPatient extends AppCompatActivity {
+public class EditPatientActivity extends AppCompatActivity {
 
     Button saveNewPatientButton;
     ImageButton epHomeButton;
