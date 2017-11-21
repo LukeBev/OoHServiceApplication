@@ -34,7 +34,7 @@ public class HubManagerActivity extends AppCompatActivity {
             }
         });
 
-        // Create click listener for home button
+        // Create click listener for home button.
         hubHomeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
