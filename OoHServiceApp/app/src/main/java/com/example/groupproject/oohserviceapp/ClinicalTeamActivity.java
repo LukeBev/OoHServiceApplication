@@ -39,7 +39,7 @@ public class ClinicalTeamActivity extends AppCompatActivity {
 
             }
         });
-//Home button fixed
+                // Home button, linking to mainActivity
                 ctHomeButton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
