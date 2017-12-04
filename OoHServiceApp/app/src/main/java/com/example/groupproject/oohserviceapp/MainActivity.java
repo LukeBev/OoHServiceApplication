@@ -8,7 +8,7 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button hubManagerButton, clinicalTeamButton;
+    Button hubManagerButton, clinicalTeamButton, timeWasterButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
         hubManagerButton = (Button) findViewById(R.id.button2);
         clinicalTeamButton = (Button) findViewById(R.id.button3);
+        timeWasterButton = (Button) findViewById(R.id.button4);
 
 
         // Create click listener for hub manager button
@@ -38,5 +39,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(clinicalTeamScreen);
             }
         });
+
+        // Create click listener for timewaster button
+        timeWasterButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Start Track List Activity
+                Intent gameScreen = new Intent(v.getContext(), StartGameActivity.class);
+                startActivity(gameScreen);
+            }
+        });
+
     }
 }
