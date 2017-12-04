@@ -12,5 +12,7 @@
     <string name="address">Enter Patient Address</string>
     <string name="patientheight">Enter Patient Height</string>
     <string name="patientweight">Enter Patient Weight</string>
-    <string name="callHubManager">Call Hub Manager</string> />
+    <string name="callHubManager">Call Hub Manager</string>
+    <string name="title_activity_maps">Clinical Teams Location (LIVE)</string>
+    />
 </resources>
