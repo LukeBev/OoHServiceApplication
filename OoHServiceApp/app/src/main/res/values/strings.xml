@@ -13,9 +13,6 @@
     <string name="patientheight">Enter Patient Height</string>
     <string name="patientweight">Enter Patient Weight</string>
     <string name="callHubManager">Call Hub Manager</string>
-<<<<<<< HEAD
     <string name="title_activity_maps">Clinical Teams Location (LIVE)</string>
-=======
->>>>>>> 019069c6c79fbb77968e086541543d85fc01ba18
     />
 </resources>
