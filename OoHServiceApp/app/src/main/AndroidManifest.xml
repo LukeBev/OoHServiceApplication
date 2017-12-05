@@ -67,7 +67,10 @@
 
         <activity
             android:name=".MapsActivity"
-            android:label="@string/title_activity_maps"></activity>
+            android:label="@string/title_activity_maps" />
+        <activity android:name=".StartGameActivity" />
+        <activity android:name=".GameActivity" />
+        <activity android:name=".ResultsActivity"></activity>
     </application>
 
 </manifest>
