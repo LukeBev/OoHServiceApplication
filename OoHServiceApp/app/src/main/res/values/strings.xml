@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">GP Out of Hours Service</string>
     <string name="oncallheading">On-Call Team</string>
+
     <string name="hubmanheading">Hub Manager</string>
     <string name="addnewpatient">Add New Patient</string>
     <string name="savenewpatient">Save New Patient</string>
@@ -12,5 +13,9 @@
     <string name="address">Enter Patient Address</string>
     <string name="patientheight">Enter Patient Height</string>
     <string name="patientweight">Enter Patient Weight</string>
-    <string name="callHubManager">Call Hub Manager</string> />
+    <string name="callHubManager">Call Hub Manager</string>
+    <string name="title_activity_maps">Clinical Team Location (LIVE)</string>
+    <string name="team_locations">Team Location</string>
+
+
 </resources>

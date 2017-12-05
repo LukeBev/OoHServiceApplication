@@ -13,7 +13,7 @@ import android.widget.ImageButton;
 
 public class HubManagerActivity extends AppCompatActivity {
 
-    Button addNewPatientButton;
+    Button addNewPatientButton, teamLocationButton;
     ImageButton hubHomeButton;
 
     @Override
@@ -23,6 +23,7 @@ public class HubManagerActivity extends AppCompatActivity {
 
         addNewPatientButton = (Button) findViewById(R.id.button6);
         hubHomeButton = (ImageButton) findViewById(R.id.imageButtonhub);
+        teamLocationButton = (Button) findViewById(R.id.button7);
 
         // Create click listener for add new patient button
         addNewPatientButton.setOnClickListener(new View.OnClickListener() {
@@ -35,6 +36,15 @@ public class HubManagerActivity extends AppCompatActivity {
         });
 
         // Create click listener for home button.
+        teamLocationButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Go to Map Screen
+                Intent MapScreen = new Intent(v.getContext(), MapsActivity.class);
+                startActivity(MapScreen);
+            }
+        });
+
         hubHomeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
