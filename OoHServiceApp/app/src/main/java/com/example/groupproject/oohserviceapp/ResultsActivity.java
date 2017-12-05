@@ -7,6 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -29,12 +30,15 @@ public class ResultsActivity extends AppCompatActivity {
     private TextView myTextViewnameBscore;
     private MediaPlayer mediaPlayer;
 
+    ImageButton rgHomeButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_results);
 
+        rgHomeButton = (ImageButton) findViewById(R.id.imageButtonrg);
 
         myTextViewplayerA = (TextView) findViewById(R.id.textViewplayerA);
         myTextViewplayerB = (TextView) findViewById(R.id.textViewplayerB);
@@ -54,7 +58,15 @@ public class ResultsActivity extends AppCompatActivity {
 
         mediaPlayer = new MediaPlayer();
 
-
+        // Home button, linking to mainActivity
+        rgHomeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Go to Home Screen
+                Intent HomeScreen = new Intent(v.getContext(), MainActivity.class);
+                startActivity(HomeScreen);
+            }
+        });
 
 
         Bundle extras = getIntent().getExtras();

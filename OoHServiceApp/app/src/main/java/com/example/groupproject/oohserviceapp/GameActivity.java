@@ -18,6 +18,8 @@ public class GameActivity extends AppCompatActivity {
     Animation fade_in, fade_out;
     ViewFlipper viewFlipper;
 
+    ImageButton pgHomeButton;
+
     private ImageView rockButton;
     private ImageButton scissorsButton;
     private ImageButton paperButton;
@@ -44,6 +46,8 @@ public class GameActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
 
+        pgHomeButton = (ImageButton) findViewById(R.id.imageButtonpg);
+
         // viewFlipper = (ViewFlipper) this.findViewById(R.id.bckgrndViewFlipper1);
         //fade_in = AnimationUtils.loadAnimation(this,
         //      android.R.anim.fade_in);
@@ -67,6 +71,15 @@ public class GameActivity extends AppCompatActivity {
         textViewplayerBscorename = (TextView) findViewById(R.id.textViewplayerBscorename);
 
 
+        // Home button, linking to mainActivity
+        pgHomeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Go to Home Screen
+                Intent HomeScreen = new Intent(v.getContext(), MainActivity.class);
+                startActivity(HomeScreen);
+            }
+        });
 
 
         if (playerAimage .equals ("1")) {

@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class StartGameActivity extends AppCompatActivity {
@@ -18,6 +19,8 @@ public class StartGameActivity extends AppCompatActivity {
     private Button playMusic;
     private MediaPlayer mediaPlayer;
 
+    ImageButton sgHomeButton;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,8 +30,20 @@ public class StartGameActivity extends AppCompatActivity {
         playerAName = (EditText) findViewById(R.id.editTextPlayerAName);
         playerBName = (TextView) findViewById(R.id.textViewPlayerBName);
 
+        sgHomeButton = (ImageButton) findViewById(R.id.imageButtonsg);
+
         final String player2 = "Zeeshan";
         playerBName.setText(player2);
+
+        // Home button, linking to mainActivity
+        sgHomeButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Go to Home Screen
+                Intent HomeScreen = new Intent(v.getContext(), MainActivity.class);
+                startActivity(HomeScreen);
+            }
+        });
 
 
         playGameButton.setOnClickListener(new View.OnClickListener(){
