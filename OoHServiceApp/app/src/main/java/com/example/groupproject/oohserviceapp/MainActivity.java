@@ -15,9 +15,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        hubManagerButton = (Button) findViewById(R.id.button2);
-        clinicalTeamButton = (Button) findViewById(R.id.button3);
-        startGameButton = (Button) findViewById(R.id.button4);
+        hubManagerButton = (Button) findViewById(R.id.buttonhubmanager);
+        clinicalTeamButton = (Button) findViewById(R.id.buttononcall);
+        startGameButton = (Button) findViewById(R.id.buttontimewaster);
 
 
         // Create click listener for hub manager button

@@ -1,8 +1,8 @@
 <resources>
     <string name="app_name">GP Out of Hours Service</string>
     <string name="oncallheading">On-Call Team</string>
-
     <string name="hubmanheading">Hub Manager</string>
+    <string name="timewasterheading">Time Waster Zone</string>
     <string name="addnewpatient">Add New Patient</string>
     <string name="savenewpatient">Save New Patient</string>
     <string name="activepatients">Active Patients</string>
@@ -17,5 +17,24 @@
     <string name="title_activity_maps">Clinical Team Location (LIVE)</string>
     <string name="team_locations">Team Location</string>
 
+    <string name="choose_weapon">Choose your weapon!!</string>
+    <string name="start_game">Start Game</string>
+    <string name="enter_name">Enter Your Name</string>
+    <string name="challenger">Your challenger today is</string>
+    <string name="play_music">Play Music!</string>
+    <string name="scoreboard">SCOREBOARD</string>
+    <string name="play_again">Play Next Round</string>
+    <string name="new_game">Start New Game</string>
+    <string name="opponent_image">Image of Player B</string>
+    <string name="vs">VS</string>
+
+    <string name="app_logo">Image of app logo</string>
+    <string name="rock_image">Image of a rock</string>
+    <string name="scissor_image">Image of scissors</string>
+    <string name="paper_image">Image of paper</string>
+    <string name="home_button">Home Button</string>
+    <string name="nhs_logo">NHS Logo</string>
+    <string name="player_a_image">Image of Player A\'s weapon</string>
+    <string name="player_b_image">Image of Player B\'s weapon</string>
 
 </resources>

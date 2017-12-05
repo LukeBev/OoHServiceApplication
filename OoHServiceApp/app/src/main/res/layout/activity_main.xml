@@ -17,7 +17,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:id="@+id/textView"
+        android:id="@+id/textViewAppName"
         android:layout_marginTop="8dp"
         app:layout_constraintVertical_bias="0.248"
         android:layout_marginRight="8dp"
@@ -26,7 +26,7 @@
         app:layout_constraintHorizontal_bias="0.511" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/buttonhubmanager"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
         android:layout_marginBottom="8dp"
@@ -36,7 +36,7 @@
         android:background="@color/buttonbgcolor"
         android:textColor="@color/buttontxtcolor"
         android:textSize="@dimen/button_textsize"
-        android:text="Hub Manager"
+        android:text="@string/hubmanheading"
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.147"
@@ -47,13 +47,13 @@
 
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/buttononcall"
         android:layout_width="@dimen/button_width"
         android:layout_height="@dimen/button_height"
         android:background="@color/buttonbgcolor"
         android:textColor="@color/buttontxtcolor"
         android:textSize="@dimen/button_textsize"
-        android:text="On-Call Team"
+        android:text="@string/oncallheading"
         android:textAllCaps="false"
         android:layout_marginRight="8dp"
         app:layout_constraintRight_toRightOf="parent"
@@ -67,10 +67,11 @@
         app:layout_constraintVertical_bias="0.838" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/imageViewNHSLogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/nhs_logo"
+        android:contentDescription="@string/nhs_logo"
         app:layout_constraintTop_toTopOf="parent"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -82,22 +83,22 @@
         app:layout_constraintVertical_bias="0.02" />
 
     <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="330dp"
-        android:layout_height="282dp"
-        app:srcCompat="@drawable/house"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginTop="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/imageViewAppLogo"
+        android:contentDescription="@string/app_logo"
+        android:layout_width="328dp"
+        android:layout_height="254dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintRight_toRightOf="parent"
         android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintVertical_bias="0.564" />
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.65"
+        app:srcCompat="@drawable/house" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/buttontimewaster"
         android:layout_width="303dp"
         android:layout_height="47dp"
         android:layout_marginBottom="8dp"
@@ -105,7 +106,7 @@
         android:layout_marginRight="8dp"
         android:layout_marginTop="8dp"
         android:background="@color/buttonbgcolor"
-        android:text="Time Waster Zone"
+        android:text="@string/timewasterheading"
         android:textAllCaps="false"
         android:textColor="@color/buttontxtcolor"
         android:textSize="@dimen/button_textsize"

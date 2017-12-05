@@ -19,7 +19,8 @@ public class ResultsActivity extends AppCompatActivity {
     private TextView myTextViewmsg;
     private ImageView myImageViewplayerA;
     private ImageView myImageViewplayerB;
-    private Button goBackButton;
+    private Button nextRoundButton;
+    private Button startNewGameButton;
     private TextView myPlayerAScore;
     private TextView myPlayerBScore;
     private TextView myTextViewnameA;
@@ -48,7 +49,8 @@ public class ResultsActivity extends AppCompatActivity {
         myPlayerBScore = (TextView) findViewById(R.id.textViewPlayerBScore);
         myImageViewplayerA = (ImageView) findViewById(R.id.imageViewImageA);
         myImageViewplayerB = (ImageView) findViewById(R.id.imageViewImageB);
-        goBackButton = (Button) findViewById(R.id.button2);
+        nextRoundButton = (Button) findViewById(R.id.buttonplaynext);
+        startNewGameButton = (Button) findViewById(R.id.buttonrestartgame);
         myTextViewnameA = (TextView) findViewById(R.id.textViewnameA);
         myTextViewnameB = (TextView) findViewById(R.id.textViewnameB);
         myTextViewnameAscore = (TextView) findViewById(R.id.textViewnameAscore);
@@ -205,7 +207,7 @@ public class ResultsActivity extends AppCompatActivity {
 
 
 
-        goBackButton.setOnClickListener(new View.OnClickListener(){
+        nextRoundButton.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View v) {
@@ -219,8 +221,17 @@ public class ResultsActivity extends AppCompatActivity {
                 mediaPlayer.pause();
                 startActivity(NewGame);
                 finish();
+            }
+        });
 
+        startNewGameButton.setOnClickListener(new View.OnClickListener(){
 
+            @Override
+            public void onClick(View v) {
+                Intent StartNewGame = new Intent(ResultsActivity.this, StartGameActivity.class);
+                mediaPlayer.pause();
+                startActivity(StartNewGame);
+                finish();
             }
         });
 

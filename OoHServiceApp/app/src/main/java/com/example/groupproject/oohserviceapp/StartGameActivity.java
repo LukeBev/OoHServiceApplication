@@ -9,6 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class StartGameActivity extends AppCompatActivity {
 
@@ -50,16 +51,19 @@ public class StartGameActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                final String editTextVal = playerAName.getText().toString();
-
-                Intent PlayGame = new Intent(v.getContext(), GameActivity.class);
-                PlayGame.putExtra("playerAname", editTextVal);
-                PlayGame.putExtra("playerBname", player2);
-                PlayGame.putExtra("playerAscore", "0");
-                PlayGame.putExtra("playerBscore", "0");
-                PlayGame.putExtra("playerAscoretotal", "0");
-                //startMusic();
-                startActivity(PlayGame);
+                if(playerAName.getText().toString().trim().length() == 0) {
+                    Toast toast = Toast.makeText(StartGameActivity.this, "Please enter your name", Toast.LENGTH_SHORT);
+                    toast.show();
+                } else {
+                    final String editTextVal = playerAName.getText().toString();
+                    Intent PlayGame = new Intent(v.getContext(), GameActivity.class);
+                    PlayGame.putExtra("playerAname", editTextVal);
+                    PlayGame.putExtra("playerBname", player2);
+                    PlayGame.putExtra("playerAscore", "0");
+                    PlayGame.putExtra("playerBscore", "0");
+                    PlayGame.putExtra("playerAscoretotal", "0");
+                    startActivity(PlayGame);
+                }
             }
         });
 
