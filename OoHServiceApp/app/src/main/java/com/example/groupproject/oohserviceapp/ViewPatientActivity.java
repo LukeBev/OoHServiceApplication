@@ -17,7 +17,7 @@ public class ViewPatientActivity extends AppCompatActivity {
     TextView firstName, surname, address, chiNumber, dob, height, weight, team;
     ImageButton homeButton;
 
-    Button viewPatientBack, viewMapfromPa;
+    Button viewMapfromPa;
 
 
     @Override
@@ -25,19 +25,9 @@ public class ViewPatientActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_viewablepatient);
 
-       viewPatientBack = (Button) findViewById(R.id.backoncall2);
-       viewMapfromPa = (Button) findViewById(R.id.mapbutton);
+        viewMapfromPa = (Button) findViewById(R.id.mapbutton);
 
-       // Create click listener for patient activity back button
 
-        viewPatientBack.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Start clinical team Activity
-                Intent clinicalteamScreen = new Intent(v.getContext(), ClinicalTeamActivity.class);
-                startActivity(clinicalteamScreen);
-            }
-        });
 
         viewMapfromPa.setOnClickListener(new View.OnClickListener() {
             @Override
