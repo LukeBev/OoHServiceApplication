@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -16,10 +17,27 @@ public class ViewPatientActivity extends AppCompatActivity {
     TextView firstName, surname, address, chiNumber, dob, height, weight, team;
     ImageButton homeButton;
 
+    Button viewPatientBack;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_viewablepatient);
+
+       viewPatientBack = (Button) findViewById(R.id.backoncall2);
+
+
+       // Create click listener for patient activity back button
+
+        viewPatientBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Start clinical team Activity
+                Intent clinicalteamScreen = new Intent(v.getContext(), ClinicalTeamActivity.class);
+                startActivity(clinicalteamScreen);
+            }
+        });
+
 
         // Getting the resource id for each textView
         firstName = (TextView) findViewById(R.id.textView15);

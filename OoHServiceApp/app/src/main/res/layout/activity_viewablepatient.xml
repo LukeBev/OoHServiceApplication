@@ -11,43 +11,24 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
-            android:id="@+id/textView25"
-            android:layout_width="86dp"
-            android:layout_height="24dp"
+        <Button
+            android:id="@+id/backoncall2"
+            android:layout_width="135dp"
+            android:layout_height="62dp"
             android:layout_marginBottom="8dp"
             android:layout_marginEnd="8dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="8dp"
-            android:text="@string/details2"
-            android:textAlignment="textStart"
-            android:textColor="@color/colorPrimaryDark"
+            android:backgroundTint="@color/buttonbgcolor"
+            android:text="@string/backoncall"
+            android:textColor="@color/buttontxtcolor"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.404"
+            app:layout_constraintHorizontal_bias="0.824"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.881"
-            tools:text="BMI Output" />
-
-        <TextView
-            android:id="@+id/textView24"
-            android:layout_width="86dp"
-            android:layout_height="24dp"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:text="@string/height"
-            android:textAlignment="textEnd"
-            android:textColor="@color/colorPrimaryDark"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.063"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.881"
-            tools:text="BMI =" />
+            app:layout_constraintVertical_bias="1.0"
+            tools:targetApi="lollipop" />
 
         <TextView
             android:id="@+id/textView23"
@@ -333,25 +314,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.264" />
-
-        <Button
-            android:id="@+id/button3"
-            android:layout_width="135dp"
-            android:layout_height="62dp"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            android:backgroundTint="@color/buttonbgcolor"
-            android:text="@string/calculate_bmi"
-            android:textColor="@color/buttontxtcolor"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.824"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="1.0"
-            tools:targetApi="lollipop" />
 
     </android.support.constraint.ConstraintLayout>
 </LinearLayout>
