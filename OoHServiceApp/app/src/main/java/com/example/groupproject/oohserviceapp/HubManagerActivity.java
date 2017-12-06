@@ -128,7 +128,7 @@ public class HubManagerActivity extends AppCompatActivity {
                 intent.putExtra("address", tempAddressList.get(position));
                 intent.putExtra("dob", tempDobList.get(position));
                 intent.putExtra("height" ,tempHeightList.get(position));
-                intent.putExtra("weight", tempHeightList.get(position));
+                intent.putExtra("weight", tempWeightList.get(position));
                 intent.putExtra("position", position);
 
                 // Start ViewPatientActivity

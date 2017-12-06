@@ -47,7 +47,6 @@ public class DatabaseWorker extends SQLiteAssetHelper {
     }
 
     public ArrayList<ArrayList<String>> fetchDetails() {
-        System.out.println("Made it here");
         SQLiteDatabase database = getReadableDatabase();
         SQLiteQueryBuilder queryBuilder = new SQLiteQueryBuilder();
 
@@ -156,5 +155,83 @@ public class DatabaseWorker extends SQLiteAssetHelper {
 
         database.insert("people",null ,content);
 
+    }
+
+    public ArrayList<ArrayList<String>> fetchSpecificDetails(String teamNumber) {
+        SQLiteDatabase database = getReadableDatabase();
+        SQLiteQueryBuilder queryBuilder = new SQLiteQueryBuilder();
+
+        String[] sqlSelect = {"id", "first_name", "surname", "address", "team_number", "chi_number", "date_of_birth", "height", "weight"};
+        String sqlTable = "people";
+        String where = "team_number = "+teamNumber;
+
+        // Build query, selects all rows
+        queryBuilder.setTables(sqlTable);
+        Cursor cur = queryBuilder.query(database, sqlSelect, where, null,
+                null, null, null);
+
+        // Initialise temporary variables to hold each field in a row of data
+        String firstname, surname, team, chiNumber, address, dob, height, weight = "init";
+
+        // Move to first row
+        cur.moveToFirst();
+
+        // Loop around all rows, packaging each field from a row into a collection of the same type of fields
+        for (int i = 0; i<cur.getCount(); i++) {
+
+            firstname = cur.getString(cur.getColumnIndex("first_name"));
+            System.out.println("FIRSTNAME: " + firstname);
+            firstNameList.add(firstname);
+            System.out.println("FIRSTNAME LIST: " + firstNameList);
+
+            surname = cur.getString(cur.getColumnIndex("surname"));
+            System.out.println("SURNAME: " + surname);
+            surnameList.add(surname);
+            System.out.println("SURNAME LIST: " + surnameList);
+
+            team = cur.getString(cur.getColumnIndex("team_number"));
+            System.out.println("TEAM: " + team);
+            teamList.add(team);
+            System.out.println("TEAM LIST: " + teamList);
+
+            chiNumber = cur.getString(cur.getColumnIndex("chi_number"));
+            System.out.println("CHI: " + chiNumber);
+            chiNumberList.add(chiNumber);
+            System.out.println("CHI LIST: " + chiNumberList);
+
+            address = cur.getString(cur.getColumnIndex("address"));
+            System.out.println("ADDRESS: " + address);
+            addressList.add(address);
+            System.out.println("ADDRESS LIST: " + addressList);
+
+            dob = cur.getString(cur.getColumnIndex("date_of_birth"));
+            System.out.println("DOB: " + dob);
+            dobList.add(dob);
+            System.out.println("DOB LIST: " + dobList);
+
+            height = cur.getString(cur.getColumnIndex("height"));
+            System.out.println("HEIGHT: " + height);
+            heightList.add(height);
+            System.out.println("HEIGHT LIST: " + heightList);
+
+            weight = cur.getString(cur.getColumnIndex("weight"));
+            System.out.println("WEIGHT: " + weight);
+            weightList.add(weight);
+            System.out.println("WEIGHT LIST: " + weightList);
+
+            cur.moveToNext();
+        }
+        listOflists.add(firstNameList);
+        listOflists.add(surnameList);
+        listOflists.add(teamList);
+        listOflists.add(chiNumberList);
+        listOflists.add(addressList);
+        listOflists.add(dobList);
+        listOflists.add(heightList);
+        listOflists.add(weightList);
+
+        cur.close();
+        database.close();
+        return listOflists;
     }
 }
