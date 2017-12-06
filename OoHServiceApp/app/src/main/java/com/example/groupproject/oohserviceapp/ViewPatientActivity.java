@@ -17,7 +17,8 @@ public class ViewPatientActivity extends AppCompatActivity {
     TextView firstName, surname, address, chiNumber, dob, height, weight, team;
     ImageButton homeButton;
 
-    Button viewPatientBack;
+    Button viewPatientBack, viewMapfromPa;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +26,7 @@ public class ViewPatientActivity extends AppCompatActivity {
         setContentView(R.layout.activity_viewablepatient);
 
        viewPatientBack = (Button) findViewById(R.id.backoncall2);
-
+       viewMapfromPa = (Button) findViewById(R.id.mapbutton);
 
        // Create click listener for patient activity back button
 
@@ -37,6 +38,24 @@ public class ViewPatientActivity extends AppCompatActivity {
                 startActivity(clinicalteamScreen);
             }
         });
+
+        viewMapfromPa.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Start clinical team Activity
+                Intent clinicalteamScreen = new Intent(v.getContext(), MapsActivity.class);
+                startActivity(clinicalteamScreen);
+            }
+        });
+
+
+
+
+
+
+
+
+
 
 
         // Getting the resource id for each textView

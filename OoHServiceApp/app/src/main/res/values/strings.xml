@@ -58,6 +58,6 @@
     <string name="details2">Details</string>
     <string name="todo">TODO</string>
     <string name="backoncall">Back</string>
-
+    <string name ="mapbutton">Show Patient Location</string>
 
 </resources>
