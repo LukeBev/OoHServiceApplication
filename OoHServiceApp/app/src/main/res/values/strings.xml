@@ -8,6 +8,7 @@
     <string name="activepatients">Active Patients</string>
     <string name="forename">Enter Patient Forename(s)</string>
     <string name="surname">Enter Patient Surname(s)</string>
+    <string name="team">Assign Team Number (1-10)</string>
     <string name="chinumber">Enter Patient CHI Number</string>
     <string name="dob">Enter Patient D.O.B (xx-xx-xx)</string>
     <string name="address">Enter Patient Address</string>
