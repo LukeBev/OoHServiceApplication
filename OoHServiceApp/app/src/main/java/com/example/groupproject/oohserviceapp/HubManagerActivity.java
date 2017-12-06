@@ -133,6 +133,7 @@ public class HubManagerActivity extends AppCompatActivity {
 
                 // Start ViewPatientActivity
                 startActivity(intent);
+                finish();
             }
         });
     }
