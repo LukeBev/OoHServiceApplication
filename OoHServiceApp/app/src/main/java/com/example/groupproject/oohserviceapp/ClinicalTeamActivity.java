@@ -144,7 +144,6 @@ public class ClinicalTeamActivity extends AppCompatActivity {
 
                             // Start ViewPatientActivity
                             startActivity(intent);
-                            finish();
                         }
                     });
 
@@ -214,7 +213,6 @@ public class ClinicalTeamActivity extends AppCompatActivity {
 
                 // Start ViewPatientActivity
                 startActivity(intent);
-                finish();
             }
         });
     }
