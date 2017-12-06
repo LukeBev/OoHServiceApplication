@@ -110,32 +110,46 @@
         app:layout_constraintVertical_bias="0.139" />
 
     <EditText
+        android:id="@+id/editTextTeam"
+        android:layout_width="322dp"
+        android:layout_height="38dp"
+        android:ems="10"
+        android:hint="@string/team"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/buttonsavePatient"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewAddPatient"
+        app:layout_constraintVertical_bias="0.026" />
+
+    <EditText
         android:id="@+id/editTextCHINumber"
         android:layout_width="322dp"
         android:layout_height="38dp"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="@string/chinumber"
+        android:inputType="textPersonName"
         android:text=""
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/buttonsavePatient"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewAddPatient"
-        app:layout_constraintVertical_bias="0.108" />
+        app:layout_constraintVertical_bias="0.152" />
 
     <EditText
         android:id="@+id/editTextFName"
         android:layout_width="322dp"
         android:layout_height="38dp"
         android:ems="10"
-        android:inputType="textPersonName"
         android:hint="@string/forename"
+        android:inputType="textPersonName"
         android:text=""
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/buttonsavePatient"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewAddPatient"
-        app:layout_constraintVertical_bias="0.233" />
+        app:layout_constraintVertical_bias="0.279" />
 
     <EditText
         android:id="@+id/editTextSurname"
@@ -149,7 +163,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewAddPatient"
-        app:layout_constraintVertical_bias="0.358" />
+        app:layout_constraintVertical_bias="0.405" />
 
     <EditText
         android:id="@+id/editTextDob"
@@ -163,7 +177,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewAddPatient"
-        app:layout_constraintVertical_bias="0.608" />
+        app:layout_constraintVertical_bias="0.657" />
 
     <EditText
         android:id="@+id/editTextAddress"
@@ -177,7 +191,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewAddPatient"
-        app:layout_constraintVertical_bias="0.483" />
+        app:layout_constraintVertical_bias="0.531" />
 
     <EditText
         android:id="@+id/editTextHeight"
@@ -191,7 +205,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewAddPatient"
-        app:layout_constraintVertical_bias="0.858" />
+        app:layout_constraintVertical_bias="0.91" />
 
     <EditText
         android:id="@+id/editTextWeight"
@@ -205,6 +219,6 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewAddPatient"
-        app:layout_constraintVertical_bias="0.733" />
+        app:layout_constraintVertical_bias="0.784" />
 
 </android.support.constraint.ConstraintLayout>
