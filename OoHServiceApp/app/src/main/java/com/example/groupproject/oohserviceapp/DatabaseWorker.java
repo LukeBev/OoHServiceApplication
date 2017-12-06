@@ -125,39 +125,36 @@ public class DatabaseWorker extends SQLiteAssetHelper {
     }
 
     // this method will need params to take in the strings from the .getText() of the TextViews
-//    public void insertDetails() {
-//
-//        SQLiteDatabase database = getWritableDatabase();
-//
-//        SQLiteQueryBuilder queryBuilder = new SQLiteQueryBuilder();
-//
-//        String[] sqlSelect = {"id"};
-//        String sqlTable = "people";
-//
-//        // Build query, selects all rows
-//        queryBuilder.setTables(sqlTable);
-//        Cursor cur = queryBuilder.query(database, sqlSelect, null, null,
-//                null, null, null);
-//
-//        int idNum = cur.getCount()+1;
-//        String id = String.valueOf(idNum);
-//        System.out.println("NEW ROW ID: " + id);
-//
-//        int chiEndNum = 100 + idNum;
-//        String chi = "000" + String.valueOf(chiEndNum);
-//
-//        ContentValues content = new ContentValues();
-//        content.put("id",id);
-//        content.put("chi_number",chi);
-//        content.put("first_name","mark");
-//        content.put("surname","M");
-//        content.put("address","45 Flow Way, Glasgow");
-//        content.put("date_of_birth","12-12-1980");
-//        content.put("height","150");
-//        content.put("weight","150");
-//        content.put("team_number","4");
-//
-//        database.insert("people",null ,content);
-//
-//    }
+    public void insertDetails(String team, String chi, String firstname, String surname, String address, String dob, String height, String weight) {
+
+        SQLiteDatabase database = getWritableDatabase();
+
+        SQLiteQueryBuilder queryBuilder = new SQLiteQueryBuilder();
+
+        String[] sqlSelect = {"id"};
+        String sqlTable = "people";
+
+        // Build query, selects all rows
+        queryBuilder.setTables(sqlTable);
+        Cursor cur = queryBuilder.query(database, sqlSelect, null, null,
+                null, null, null);
+
+        int idNum = cur.getCount()+1;
+        String id = String.valueOf(idNum);
+        System.out.println("NEW ROW ID: " + id);
+
+        ContentValues content = new ContentValues();
+        content.put("id", id);
+        content.put("chi_number", chi);
+        content.put("first_name", firstname);
+        content.put("surname", surname);
+        content.put("address", address);
+        content.put("date_of_birth", dob);
+        content.put("height", height);
+        content.put("weight", weight);
+        content.put("team_number", team);
+
+        database.insert("people",null ,content);
+
+    }
 }
