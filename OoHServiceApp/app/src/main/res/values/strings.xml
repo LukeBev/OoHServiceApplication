@@ -37,4 +37,24 @@
     <string name="player_a_image">Image of Player A\'s weapon</string>
     <string name="player_b_image">Image of Player B\'s weapon</string>
 
+    // View Patient Activity
+    <string name="chi">CHI</string>
+    <string name="forename_s">Forename(s)</string>
+    <string name="patient_details">Patient Details</string>
+    <string name="height">Height</string>
+    <string name="surnamepd">Surname</string>
+    <string name="addresspd">Address</string>
+    <string name="dobpd">DOB</string>
+    <string name="weight">Weight</string>
+    <string name="chi_number">CHI Number</string>
+    <string name="name">Name</string>
+    <string name="namesn">Name</string>
+    <string name="address_details">Address Details</string>
+    <string name="dob_details">DOB Details</string>
+    <string name="details">Details</string>
+    <string name="details2">Details</string>
+    <string name="todo">TODO</string>
+    <string name="calculate_bmi">Calculate BMI</string>
+
+
 </resources>
