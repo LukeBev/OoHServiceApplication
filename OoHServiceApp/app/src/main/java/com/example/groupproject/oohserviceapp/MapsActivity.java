@@ -39,7 +39,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap = googleMap;
 
         // Add a marker in and move the camera
-        LatLng sydney = new LatLng(55.843298, -4.429861);
+        LatLng sydney = new LatLng(55.843298, -4.429861);//Hardcoded input but had the ability to be dynamic
         mMap.addMarker(new MarkerOptions().position(sydney).title("Marker is CT1"));
         //mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
         float zoomLevel = 16.0f; //This goes up to 21
