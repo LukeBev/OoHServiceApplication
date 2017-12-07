@@ -48,6 +48,7 @@ public class HubManagerActivity extends AppCompatActivity {
                 // Go to Edit Patient Screen
                 Intent EditPatient = new Intent(v.getContext(), EditPatientActivity.class);
                 startActivity(EditPatient);
+                finish();
             }
         });
 
