@@ -27,10 +27,10 @@ public class StartGameActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_start_game);
 
+        // Get resources
         playGameButton = (Button) findViewById(R.id.buttonPlayGame);
         playerAName = (EditText) findViewById(R.id.editTextPlayerAName);
         playerBName = (TextView) findViewById(R.id.textViewPlayerBName);
-
         sgHomeButton = (ImageButton) findViewById(R.id.imageButtonsg);
 
         final String player2 = "Zeeshan";
@@ -47,10 +47,12 @@ public class StartGameActivity extends AppCompatActivity {
         });
 
 
+        // On click listener for play game button
         playGameButton.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View v) {
+                // Validator for name check
                 if(playerAName.getText().toString().trim().length() == 0) {
                     Toast toast = Toast.makeText(StartGameActivity.this, "Please enter your name", Toast.LENGTH_SHORT);
                     toast.show();
@@ -67,7 +69,7 @@ public class StartGameActivity extends AppCompatActivity {
             }
         });
 
-
+        // Initialise media player
         mediaPlayer = new MediaPlayer();
         mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.game_field);
 

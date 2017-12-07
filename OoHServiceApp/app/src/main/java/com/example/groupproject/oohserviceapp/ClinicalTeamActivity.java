@@ -1,6 +1,5 @@
 package com.example.groupproject.oohserviceapp;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -12,14 +11,8 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.Toast;
-
 import java.util.ArrayList;
-import java.util.ResourceBundle;
 
-/**
- * Created on 14/11/2017.
- * edited 21/11/2017.
- */
 
 public class ClinicalTeamActivity extends AppCompatActivity {
 
@@ -44,10 +37,12 @@ public class ClinicalTeamActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_clinicalteam);
 
+        // Get resource id
         editTeamSelect = (EditText) findViewById(R.id.edit_team_select);
         callHubManager = (Button) findViewById(R.id.button5);
         pickTeam = (Button) findViewById(R.id.pickTeam);
         ctHomeButton = (ImageButton) findViewById(R.id.imageButtonct);
+
         // Create click listener for add new patient button
         callHubManager.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,12 +65,13 @@ public class ClinicalTeamActivity extends AppCompatActivity {
             }
         });
 
-
+        // Get data from database method call
         getDatabase();
 
+        // Create new instance of DatabaseWorker class
         final DatabaseWorker db = new DatabaseWorker(this);
 
-        // Pick team button
+        // Select team button
         pickTeam.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -83,6 +79,7 @@ public class ClinicalTeamActivity extends AppCompatActivity {
                 if (teamSelection.isEmpty()) {
                     Toast.makeText(getApplicationContext(), "Please enter a team number 1-10", Toast.LENGTH_LONG).show();
                 } else {
+                    // Once team is input and recieved, the database is queried again with a WHERE clause finding "team_number" equals input
                     myDetailLists.clear();
                     myDetailLists = db.fetchSpecificDetails(teamSelection);
 
@@ -94,6 +91,8 @@ public class ClinicalTeamActivity extends AppCompatActivity {
                     tempteamList = myDetailLists.get(2);
 
                     customDetailLists.clear();
+
+                    // Creating a custom arrayList of arrayLists to pass to the custom created ListView adapter
                     for (int j = 0; j<tempfirstnameList.size(); j++) {
 
                         String f = tempfirstnameList.get(j);

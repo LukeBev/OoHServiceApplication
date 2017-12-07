@@ -10,9 +10,6 @@ import android.widget.ImageButton;
 import android.widget.ListView;
 import java.util.ArrayList;
 
-/**
- * Created on 14/11/2017.
- */
 
 public class HubManagerActivity extends AppCompatActivity {
 
@@ -37,6 +34,7 @@ public class HubManagerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_hubmanager);
 
+        // Get resources
         addNewPatientButton = (Button) findViewById(R.id.button6);
         hubHomeButton = (ImageButton) findViewById(R.id.imageButtonhub);
         teamLocationButton = (Button) findViewById(R.id.button7);
@@ -52,7 +50,7 @@ public class HubManagerActivity extends AppCompatActivity {
             }
         });
 
-        // Create click listener for home button.
+        // Create click listener for team location button.
         teamLocationButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -62,6 +60,7 @@ public class HubManagerActivity extends AppCompatActivity {
             }
         });
 
+        // Create click listener  for home button
         hubHomeButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

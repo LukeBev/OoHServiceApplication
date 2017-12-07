@@ -10,10 +10,6 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 
-/**
- * Created on 14/11/2017.
- */
-
 public class EditPatientActivity extends AppCompatActivity {
 
     Button saveNewPatientButton;
@@ -26,6 +22,7 @@ public class EditPatientActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_editablepatient);
 
+        // Get resource id
         editTeamText = (EditText) findViewById(R.id.editTextTeam);
         editCHIText = (EditText) findViewById(R.id.editTextCHINumber);
         editFirstNameText = (EditText) findViewById(R.id.editTextFName);
@@ -35,11 +32,13 @@ public class EditPatientActivity extends AppCompatActivity {
         editHeightText = (EditText) findViewById(R.id.editTextHeight);
         editWeightText = (EditText) findViewById(R.id.editTextWeight);
 
-
+        // Create new instance of the databaseWorker class.
         final DatabaseWorker db = new DatabaseWorker(this);
 
+        // Initialise string variables
         String team, chi, firstName, surname, address, dob, height, weight;
 
+        // Get resource
         saveNewPatientButton = (Button) findViewById(R.id.buttonsavePatient);
 
         // Listener for when submit button clicked for inserting new patient to the database

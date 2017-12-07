@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Get resources
         hubManagerButton = (Button) findViewById(R.id.buttonhubmanager);
         clinicalTeamButton = (Button) findViewById(R.id.buttononcall);
         startGameButton = (Button) findViewById(R.id.buttontimewaster);
@@ -24,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         hubManagerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Start Track List Activity
+                // Start hub manager Activity
                 Intent hubManScreen = new Intent(v.getContext(), HubManagerActivity.class);
                 startActivity(hubManScreen);
             }

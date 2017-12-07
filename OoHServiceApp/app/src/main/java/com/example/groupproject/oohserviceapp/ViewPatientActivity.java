@@ -8,9 +8,6 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-/**
- * Created on 01/12/2017.
- */
 
 public class ViewPatientActivity extends AppCompatActivity {
 
@@ -25,10 +22,12 @@ public class ViewPatientActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_viewablepatient);
 
+
+        // Get resource
         viewMapfromPa = (Button) findViewById(R.id.mapbutton);
 
 
-
+        // on click listener for access map button
         viewMapfromPa.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -38,20 +37,9 @@ public class ViewPatientActivity extends AppCompatActivity {
             }
         });
 
-
-
-
-
-
-
-
-
-
-
         // Getting the resource id for each textView
         firstName = (TextView) findViewById(R.id.textView15);
         surname = (TextView) findViewById(R.id.textView16);
-//        team = (TextView) findViewById(R.id.textAddress);
         chiNumber = (TextView) findViewById(R.id.textView14);
         address = (TextView) findViewById(R.id.textView17);
         dob = (TextView) findViewById(R.id.textView18);
@@ -67,9 +55,6 @@ public class ViewPatientActivity extends AppCompatActivity {
 
         String surnameString = extras.getString("surname");
         surname.setText(surnameString);
-
-//        String teamString = extras.getString("team");
-//        team.setText(teamString);
 
         String chiNumberString = extras.getString("chiNumber");
         chiNumber.setText(chiNumberString);

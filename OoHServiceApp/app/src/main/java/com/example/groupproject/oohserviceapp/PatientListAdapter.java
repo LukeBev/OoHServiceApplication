@@ -8,9 +8,6 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 import java.util.ArrayList;
 
-/**
- * Created on 01/12/2017.
- */
 
 public class PatientListAdapter extends ArrayAdapter<ArrayList<String>> {
 
@@ -39,6 +36,7 @@ public class PatientListAdapter extends ArrayAdapter<ArrayList<String>> {
                     inflate(R.layout.patient_list_items, parent, false);
         }
 
+        // Get the patient item with reference to the position that has been passed in as a param
         patientDetails = pD.get(position);
 
         String firstName = patientDetails.get(0);

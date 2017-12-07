@@ -39,8 +39,8 @@ public class ResultsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_results);
 
+        // Get resources
         rgHomeButton = (ImageButton) findViewById(R.id.imageButtonrg);
-
         myTextViewplayerA = (TextView) findViewById(R.id.textViewplayerA);
         myTextViewplayerB = (TextView) findViewById(R.id.textViewplayerB);
         myTextViewwinner = (TextView) findViewById(R.id.textViewwinner);
@@ -58,6 +58,7 @@ public class ResultsActivity extends AppCompatActivity {
         myTempResult = (TextView) findViewById(R.id.textViewResultTemp);
         myTempResultB = (TextView) findViewById(R.id.textViewResultTempB);
 
+        // Initialise media player
         mediaPlayer = new MediaPlayer();
 
         // Home button, linking to mainActivity
@@ -73,7 +74,8 @@ public class ResultsActivity extends AppCompatActivity {
 
         Bundle extras = getIntent().getExtras();
 
-        String playerA = extras.getString("playerA"); //get player A weapon
+        // Get variables that were passed from game activity
+        String playerA = extras.getString("playerA");
         String playerB = extras.getString("playerB");
         final String playerAname = extras.getString("playerAname");
         final String playerBname = extras.getString("playerBname");
@@ -199,6 +201,7 @@ public class ResultsActivity extends AppCompatActivity {
 
         mediaPlayer.start(); //play sound effect
 
+        // Set value of associated scores
         String TotalPlayerA = String.valueOf(playerAscore);
         myPlayerAScore.setText(TotalPlayerA);
 
@@ -206,7 +209,7 @@ public class ResultsActivity extends AppCompatActivity {
         myPlayerBScore.setText(TotalPlayerB);
 
 
-
+        // on click listener for play another round button
         nextRoundButton.setOnClickListener(new View.OnClickListener(){
 
             @Override
@@ -224,6 +227,7 @@ public class ResultsActivity extends AppCompatActivity {
             }
         });
 
+        // click listener for start new game button
         startNewGameButton.setOnClickListener(new View.OnClickListener(){
 
             @Override

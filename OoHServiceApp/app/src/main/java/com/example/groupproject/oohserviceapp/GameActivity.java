@@ -15,15 +15,11 @@ import java.util.Random;
 
 public class GameActivity extends AppCompatActivity {
 
-    Animation fade_in, fade_out;
-    ViewFlipper viewFlipper;
-
     ImageButton pgHomeButton;
 
     private ImageView rockButton;
     private ImageButton scissorsButton;
     private ImageButton paperButton;
-    private TextView textViewPlayerB;
     private TextView textViewScoreA;
     private TextView textViewScoreB;
     private TextView textViewplayerAname;
@@ -47,23 +43,9 @@ public class GameActivity extends AppCompatActivity {
         setContentView(R.layout.activity_game);
 
         pgHomeButton = (ImageButton) findViewById(R.id.imageButtonpg);
-
-        // viewFlipper = (ViewFlipper) this.findViewById(R.id.bckgrndViewFlipper1);
-        //fade_in = AnimationUtils.loadAnimation(this,
-        //      android.R.anim.fade_in);
-        //fade_out = AnimationUtils.loadAnimation(this,
-        //      android.R.anim.fade_out);
-        //viewFlipper.setInAnimation(fade_in);
-        //viewFlipper.setOutAnimation(fade_out);
-//sets auto flipping
-        //viewFlipper.setAutoStart(true);
-        //viewFlipper.setFlipInterval(500);
-        //viewFlipper.startFlipping();
-
         rockButton = (ImageView) findViewById(R.id.imageViewRock);
         scissorsButton = (ImageButton) findViewById(R.id.imageButtonScissors);
         paperButton = (ImageButton) findViewById(R.id.imageButtonPaper);
-        //textViewPlayerB = (TextView) findViewById(R.id.textViewPlayerB);
         textViewScoreA = (TextView) findViewById(R.id.textViewScoreA);
         textViewScoreB = (TextView) findViewById(R.id.textViewScoreB);
         textViewplayerAname = (TextView) findViewById(R.id.textViewplayerAname);
@@ -171,9 +153,6 @@ public class GameActivity extends AppCompatActivity {
                 startActivity(rockintent);
             }
         });
-
-        //Display oponents weapon for testing
-        //textViewPlayerB.setText(playerBweapon[RandomNum]+" "+playerAweaponimage[RandomImageNum]);
 
     }
 }

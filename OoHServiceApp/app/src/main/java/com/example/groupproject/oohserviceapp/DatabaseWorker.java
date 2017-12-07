@@ -1,26 +1,13 @@
 package com.example.groupproject.oohserviceapp;
 
-/**
- * Created on 01/12/2017.
- */
-
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteQueryBuilder;
-
 import java.util.ArrayList;
-import android.content.ContentValues;
-import android.content.Context;
-import android.database.Cursor;
-import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteQueryBuilder;
-
 import com.readystatesoftware.sqliteasset.SQLiteAssetHelper;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class DatabaseWorker extends SQLiteAssetHelper {
 
@@ -46,6 +33,12 @@ public class DatabaseWorker extends SQLiteAssetHelper {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
+    /*
+    *   Method to query database for all records in the people table.
+    *
+    *   A looping process begins, taking a row at a time from the table, organising it into
+    *   individual arrayList<string>, these are then eventually packaged into an arrayList<arrayList<String>> which is then returned.
+    */
     public ArrayList<ArrayList<String>> fetchDetails() {
         SQLiteDatabase database = getReadableDatabase();
         SQLiteQueryBuilder queryBuilder = new SQLiteQueryBuilder();
@@ -68,44 +61,28 @@ public class DatabaseWorker extends SQLiteAssetHelper {
         for (int i = 0; i<cur.getCount(); i++) {
 
             firstname = cur.getString(cur.getColumnIndex("first_name"));
-            System.out.println("FIRSTNAME: " + firstname);
             firstNameList.add(firstname);
-            System.out.println("FIRSTNAME LIST: " + firstNameList);
 
             surname = cur.getString(cur.getColumnIndex("surname"));
-            System.out.println("SURNAME: " + surname);
             surnameList.add(surname);
-            System.out.println("SURNAME LIST: " + surnameList);
 
             team = cur.getString(cur.getColumnIndex("team_number"));
-            System.out.println("TEAM: " + team);
             teamList.add(team);
-            System.out.println("TEAM LIST: " + teamList);
 
             chiNumber = cur.getString(cur.getColumnIndex("chi_number"));
-            System.out.println("CHI: " + chiNumber);
             chiNumberList.add(chiNumber);
-            System.out.println("CHI LIST: " + chiNumberList);
 
             address = cur.getString(cur.getColumnIndex("address"));
-            System.out.println("ADDRESS: " + address);
             addressList.add(address);
-            System.out.println("ADDRESS LIST: " + addressList);
 
             dob = cur.getString(cur.getColumnIndex("date_of_birth"));
-            System.out.println("DOB: " + dob);
             dobList.add(dob);
-            System.out.println("DOB LIST: " + dobList);
 
             height = cur.getString(cur.getColumnIndex("height"));
-            System.out.println("HEIGHT: " + height);
             heightList.add(height);
-            System.out.println("HEIGHT LIST: " + heightList);
 
             weight = cur.getString(cur.getColumnIndex("weight"));
-            System.out.println("WEIGHT: " + weight);
             weightList.add(weight);
-            System.out.println("WEIGHT LIST: " + weightList);
 
             cur.moveToNext();
         }
@@ -157,6 +134,7 @@ public class DatabaseWorker extends SQLiteAssetHelper {
 
     }
 
+    // Method to take in a team_number param, then query the database with a where clause based on this value.
     public ArrayList<ArrayList<String>> fetchSpecificDetails(String teamNumber) {
         SQLiteDatabase database = getReadableDatabase();
         SQLiteQueryBuilder queryBuilder = new SQLiteQueryBuilder();
@@ -180,44 +158,28 @@ public class DatabaseWorker extends SQLiteAssetHelper {
         for (int i = 0; i<cur.getCount(); i++) {
 
             firstname = cur.getString(cur.getColumnIndex("first_name"));
-            System.out.println("FIRSTNAME: " + firstname);
             firstNameList.add(firstname);
-            System.out.println("FIRSTNAME LIST: " + firstNameList);
 
             surname = cur.getString(cur.getColumnIndex("surname"));
-            System.out.println("SURNAME: " + surname);
             surnameList.add(surname);
-            System.out.println("SURNAME LIST: " + surnameList);
 
             team = cur.getString(cur.getColumnIndex("team_number"));
-            System.out.println("TEAM: " + team);
             teamList.add(team);
-            System.out.println("TEAM LIST: " + teamList);
 
             chiNumber = cur.getString(cur.getColumnIndex("chi_number"));
-            System.out.println("CHI: " + chiNumber);
             chiNumberList.add(chiNumber);
-            System.out.println("CHI LIST: " + chiNumberList);
 
             address = cur.getString(cur.getColumnIndex("address"));
-            System.out.println("ADDRESS: " + address);
             addressList.add(address);
-            System.out.println("ADDRESS LIST: " + addressList);
 
             dob = cur.getString(cur.getColumnIndex("date_of_birth"));
-            System.out.println("DOB: " + dob);
             dobList.add(dob);
-            System.out.println("DOB LIST: " + dobList);
 
             height = cur.getString(cur.getColumnIndex("height"));
-            System.out.println("HEIGHT: " + height);
             heightList.add(height);
-            System.out.println("HEIGHT LIST: " + heightList);
 
             weight = cur.getString(cur.getColumnIndex("weight"));
-            System.out.println("WEIGHT: " + weight);
             weightList.add(weight);
-            System.out.println("WEIGHT LIST: " + weightList);
 
             cur.moveToNext();
         }

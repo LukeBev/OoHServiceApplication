@@ -32,14 +32,14 @@
                 android:id="@+id/nameText"
                 android:layout_width="215dp"
                 android:layout_height="wrap_content"
-                android:text="Patient"
+                android:text="@string/adapter_layout_name"
                 android:layout_weight="0" />
 
             <TextView
                 android:id="@+id/teamText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Team"
+                android:text="@string/adapter_layout_team"
                 android:layout_weight="0" />
 
         </LinearLayout>
